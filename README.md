@@ -35,12 +35,12 @@ Nine completed projects across a six-month window, covering the full data scienc
 
 ### In Development — LLM Trading System (Mar–Jun 2026)
 
-Five interconnected repos building an end-to-end paper trading system. Real Binance market data → chart generation → LLM vision signal analysis → backtesting → oversight dashboard. Losing trades feed back to optimize prompts automatically.
+Five interconnected repos building an end-to-end paper trading system. Real Kraken market data → chart generation → LLM vision signal analysis → backtesting → oversight dashboard. Losing trades feed back to optimize prompts automatically.
 
 | # | Repo | Stack | Status |
 |---|------|-------|--------|
-| T1 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | ccxt · Binance API · PostgreSQL · pandas | 🟡 In progress |
-| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PIL · batch PNG generation | ⬜ Starts Mar 18 |
+| T1 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | ccxt · Kraken API · PostgreSQL · SQLAlchemy · pandas | 🟢 Live |
+| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PIL · batch PNG generation | 🟡 In development |
 | T3 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | Anthropic vision API · prompt versioning | ⬜ Starts Apr 1 |
 | T4 | [trading-backtester](https://github.com/mtichikawa/trading-backtester) | vectorbt · Sharpe · drawdown · outcome feedback | ⬜ Starts Apr 27 |
 | T5 | [trading-dashboard](https://github.com/mtichikawa/trading-dashboard) | Streamlit · Plotly · prompt review UI | ⬜ Starts May 18 |
@@ -76,7 +76,7 @@ Ongoing improvements dripping into existing projects:
 
 **Tools:** Git · Jupyter · nbconvert · Selenium · mplfinance
 
-**In Development — Trading Systems:** ccxt · Binance API · OHLCV ingestion · candlestick chart generation · LLM vision-based signal generation · vectorbt · backtesting · WebSockets · paper trading dashboards · outcome-driven prompt optimization
+**Trading Systems:** ccxt · Kraken API · PostgreSQL · SQLAlchemy · OHLCV ingestion · candlestick chart generation · LLM vision-based signal generation · vectorbt · backtesting · WebSockets · paper trading dashboards · outcome-driven prompt optimization
 
 ---
 
