@@ -1,13 +1,25 @@
 # Mike Ichikawa
 
-**Data Scientist · Data Engineer · ML Engineer**  
+**Data Scientist · ML Engineer · Data Engineer**
 Portland, OR · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com)
+
+---
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=mtichikawa&show_icons=true&count_private=false&hide_border=true&theme=default&hide=stars" alt="GitHub stats" height="150"/>
+  &nbsp;&nbsp;
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mtichikawa&layout=compact&hide_border=true&langs_count=6&hide=jupyter+notebook" alt="Top languages" height="150"/>
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=mtichikawa&theme=default&hide_border=true" alt="GitHub streak"/>
+</p>
 
 ---
 
 ## Background
 
-BS Mechanical Engineering, MS Mathematics. Three years as a Physical Design Engineer at Intel contributing to Ivy Bridge CPU development and 22nm process R&D. Nine years as Mathematics Faculty at Santa Rosa Junior College teaching statistics, calculus, and linear algebra.
+BS Mechanical Engineering, MS Mathematics. Three years as a Physical Design Engineer at Intel (Ivy Bridge / 22nm). Nine years as Mathematics Faculty at Santa Rosa Junior College (statistics, calculus, linear algebra).
 
 Now applying that foundation — quantitative rigor, systems thinking, production engineering experience — to data science and machine learning.
 
@@ -15,48 +27,59 @@ Now applying that foundation — quantitative rigor, systems thinking, productio
 
 ## Portfolio Projects
 
-Nine completed projects across a six-month window, covering the full data science stack from statistical modeling to production APIs to cloud pipelines. Five more in active development (Mar–Jun 2026).
-
-**Portfolio site:** [mtichikawa.github.io](https://mtichikawa.github.io) — includes live interactive demos for Projects 02 and 05.
-
-### Completed
+Nine completed projects across a six-month window, covering the full data science and engineering stack. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
 
 | # | Project | Stack | Focus |
 |---|---------|-------|-------|
 | 1 | [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | Prophet · PyTorch LSTM · GitHub API | Time series forecasting · model comparison |
 | 2 | [Multi-Armed Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Thompson Sampling · UCB1 · Streamlit | Bayesian experimentation · live simulator |
-| 3 | [LLM Data Analysis Assistant](https://github.com/mtichikawa/llm-data-assistant) | Anthropic API · agent mode · tool use | Applied LLM · hybrid routing |
-| 4 | [Bias Detection in LLMs](https://github.com/mtichikawa/llm-bias-detection) | ANOVA · Cohen's d · multi-model | Statistical research methodology |
-| 5 | [Real-Time Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | IsolationForest · LOF · Docker · FastAPI | Production ML · containerization |
-| 6 | [Financial NLP Parser](https://github.com/mtichikawa/financial-nlp) | SEC EDGAR · PostgreSQL · Streamlit | NLP · financial data · SQL backend |
-| 7 | [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | PostgreSQL · SQLAlchemy · dbt | Data engineering · layered transforms |
-| 8 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Docker · FastAPI · Redis · Pydantic v2 | MLOps · REST serving · caching |
+| 3 | [LLM Data Analysis Assistant](https://github.com/mtichikawa/llm-data-assistant) | Anthropic API · hybrid routing · multi-turn | Applied LLM · rule-based fast path |
+| 4 | [Bias Detection in LLMs](https://github.com/mtichikawa/llm-bias-detection) | ANOVA · Cohen's d · lexicon scoring | Statistical research methodology |
+| 5 | [Real-Time Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | IsolationForest · LSTM · ensemble voting | Streaming ML · production packaging |
+| 6 | [Financial NLP Parser](https://github.com/mtichikawa/financial-nlp) | SEC EDGAR · regex · sentiment lexicon | NLP · financial data extraction |
+| 7 | [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | PostgreSQL · SQLAlchemy · dbt-style transforms | Data engineering · layered transforms |
+| 8 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Docker · FastAPI · Redis · Pydantic v2 | MLOps · REST inference · caching |
 | 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet | Cloud infrastructure · data lake |
 
-### In Development — LLM Trading System (Mar–Jun 2026)
+---
 
-Five interconnected repos building an end-to-end paper trading system. Real Kraken market data → chart generation → LLM vision signal analysis → backtesting → oversight dashboard. Losing trades feed back to optimize prompts automatically.
+## In Development — LLM Trading System (Mar–Jun 2026)
+
+Five interconnected repos building an end-to-end paper trading system: live market data → chart generation → LLM vision signal analysis → backtesting → oversight dashboard. Losing trades feed back automatically to optimize prompts.
 
 | # | Repo | Stack | Status |
 |---|------|-------|--------|
-| T1 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | ccxt · Kraken API · PostgreSQL · SQLAlchemy · pandas | 🟢 Live |
-| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PIL · batch PNG generation | 🟡 In development |
-| T3 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | Anthropic vision API · prompt versioning | ⬜ Starts Apr 1 |
-| T4 | [trading-backtester](https://github.com/mtichikawa/trading-backtester) | vectorbt · Sharpe · drawdown · outcome feedback | ⬜ Starts Apr 27 |
-| T5 | [trading-dashboard](https://github.com/mtichikawa/trading-dashboard) | Streamlit · Plotly · prompt review UI | ⬜ Starts May 18 |
+| T1 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | ccxt · Kraken · PostgreSQL · SQLAlchemy | 🟢 Live |
+| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PIL · batch PNG + JSON sidecars | 🟡 In development |
+| T3 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | Anthropic vision API · FinBERT · prompt versioning | ⬜ Starts Apr 2026 |
+| T4 | [trading-backtester](https://github.com/mtichikawa/trading-backtester) | vectorbt · Sharpe · drawdown · prompt feedback loop | ⬜ Starts Apr 2026 |
+| T5 | [trading-dashboard](https://github.com/mtichikawa/trading-dashboard) | Streamlit · Plotly · prompt review UI | ⬜ Starts May 2026 |
 
-### Planned Upgrades (Mar–May 2026)
+---
 
-Ongoing improvements dripping into existing projects:
+## Scheduled Upgrades (Mar–Jun 2026)
 
 | Project | Upgrade | Target |
 |---------|---------|--------|
-| GitHub Trend Forecaster | PyTorch LSTM comparison model | Mid-Mar |
-| Multi-Armed Bandit | Streamlit interactive simulator | Late Mar |
-| LLM Data Assistant | Agent mode + multi-step tool use | Early Apr |
-| Bias Detection | Multi-model + Winogender/BOLD datasets | Mid-Apr |
-| Anomaly Detection | Docker + FastAPI REST endpoint | Late Apr |
-| Financial NLP | PostgreSQL backend + Streamlit dashboard | Mid-May |
+| [Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | Dockerize + FastAPI REST endpoint | Mar 12, 2026 |
+| [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Add async endpoints + request queuing | Mar 19, 2026 |
+| [Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Streamlit interactive simulator | Mar 26, 2026 |
+| [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | Data quality validation layer | Apr 2, 2026 |
+| [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | Apr 9, 2026 |
+| [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | Apr 23, 2026 |
+| [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | PyTorch LSTM comparison model | May 7, 2026 |
+| [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | dbt transforms layer | May 14, 2026 |
+| [Financial NLP](https://github.com/mtichikawa/financial-nlp) | PostgreSQL backend + Streamlit dashboard | May 21, 2026 |
+
+---
+
+## Tinkering — [ml-experiments](https://github.com/mtichikawa/ml-experiments)
+
+A running notebook sandbox — model comparisons, paper replications, dataset deep dives. Not portfolio pieces; just thinking out loud.
+
+| Notebook | What I was exploring |
+|----------|---------------------|
+| [XGBoost vs LightGBM vs RF — Wine Quality](https://github.com/mtichikawa/ml-experiments/blob/main/comparisons/2026-03-02-xgboost-lgbm-rf-wine-quality.ipynb) | Accuracy, AUC, training time, feature importance comparison |
 
 ---
 
@@ -64,23 +87,24 @@ Ongoing improvements dripping into existing projects:
 
 **Languages:** Python · SQL · R
 
-**ML / Statistics:** scikit-learn · Prophet · PyTorch · scipy · statsmodels · ANOVA · Bayesian inference · ensemble methods · Sharpe ratio · drawdown analysis
+**ML / Statistics:** scikit-learn · Prophet · PyTorch · XGBoost · LightGBM · scipy · statsmodels · ANOVA · Bayesian inference · ensemble methods
 
-**Data Engineering:** PostgreSQL · SQLAlchemy · dbt · Apache Parquet · pandas · NumPy · Apache Kafka *(in progress)*
+**Data Engineering:** PostgreSQL · SQLAlchemy · dbt · Apache Parquet · pandas · NumPy
 
-**Cloud / Infrastructure:** AWS (S3 · Lambda · DynamoDB) · Docker · FastAPI · Redis · Pydantic · boto3
+**Cloud / Infrastructure:** AWS (S3 · Lambda · DynamoDB · CloudWatch) · Docker · FastAPI · Redis · Pydantic · boto3
 
-**LLM / NLP:** Anthropic API · RAG · multi-turn conversation · tool use / agent mode · vision API · prompt engineering · prompt versioning · regex · sentiment analysis · SEC EDGAR parsing
+**LLM / NLP:** Anthropic API · multi-turn conversation · tool use · vision API · prompt engineering · prompt versioning · RAG · regex · sentiment analysis · SEC EDGAR parsing
 
-**Visualization / Dashboards:** Matplotlib · Streamlit · Plotly / Dash *(in progress)*
+**Visualization:** Matplotlib · mplfinance · Streamlit · Plotly
 
-**Tools:** Git · Jupyter · nbconvert · Selenium · mplfinance
+**Trading Systems:** ccxt · Kraken API · OHLCV pipelines · candlestick generation · LLM vision signals · vectorbt · backtesting · outcome-driven prompt optimization
 
-**Trading Systems:** ccxt · Kraken API · PostgreSQL · SQLAlchemy · OHLCV ingestion · candlestick chart generation · LLM vision-based signal generation · vectorbt · backtesting · WebSockets · paper trading dashboards · outcome-driven prompt optimization
+**Tools:** Git · Jupyter · Docker Compose · GitHub Actions
 
 ---
 
 ## Contact
 
-Open to data science, data engineering, ML engineering, and analytics roles.  
+Open to data science, data engineering, ML engineering, and analytics roles.
 [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com)
+# reviewed: logic verified
