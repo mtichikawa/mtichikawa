@@ -109,3 +109,4 @@ Open to data science, data engineering, ML engineering, and analytics roles.
 [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com)
 # reviewed: logic verified
 # reviewed
+# note: see README for usage examples
