@@ -31,7 +31,7 @@ Nine completed projects across a six-month window, covering the full data scienc
 
 | # | Project | Stack | Focus |
 |---|---------|-------|-------|
-| 1 | [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | Prophet · PyTorch LSTM · GitHub API | Time series forecasting · model comparison |
+| 1 | [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | Prophet · GitHub API · pandas | Time series forecasting · changepoint detection |
 | 2 | [Multi-Armed Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Thompson Sampling · UCB1 · Streamlit | Bayesian experimentation · live simulator |
 | 3 | [LLM Data Analysis Assistant](https://github.com/mtichikawa/llm-data-assistant) | Anthropic API · hybrid routing · multi-turn | Applied LLM · rule-based fast path |
 | 4 | [Bias Detection in LLMs](https://github.com/mtichikawa/llm-bias-detection) | ANOVA · Cohen's d · lexicon scoring | Statistical research methodology |
@@ -106,4 +106,4 @@ A running notebook sandbox — model comparisons, paper replications, dataset de
 ## Contact
 
 Open to data science, data engineering, ML engineering, and analytics roles.
-[projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com)
+[projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [LinkedIn](https://www.linkedin.com/in/mike-ichikawa-9144a73b5/)
