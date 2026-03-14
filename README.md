@@ -43,17 +43,17 @@ Nine completed projects across a six-month window, covering the full data scienc
 
 ---
 
-## In Development — LLM Trading System (Mar–Jun 2026)
+## In Development — Trading System Arc (Mar–Apr 2026)
 
-Five interconnected repos building an end-to-end paper trading system: live market data → chart generation → LLM vision signal analysis → backtesting → oversight dashboard. Losing trades feed back automatically to optimize prompts.
+Five interconnected repos building an end-to-end paper trading system: live market data → chart generation → dual-path signal analysis (technical indicators + FinBERT sentiment) → backtesting → oversight dashboard. Entirely free to run — no paid APIs.
 
 | # | Repo | Stack | Status |
 |---|------|-------|--------|
 | T1 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | ccxt · Kraken · PostgreSQL · SQLAlchemy | 🟢 Live |
-| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PIL · batch PNG + JSON sidecars | 🟡 In development |
-| T3 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | Anthropic vision API · FinBERT · prompt versioning | ⬜ Starts Apr 2026 |
-| T4 | [trading-backtester](https://github.com/mtichikawa/trading-backtester) | vectorbt · Sharpe · drawdown · prompt feedback loop | ⬜ Starts Apr 2026 |
-| T5 | [trading-dashboard](https://github.com/mtichikawa/trading-dashboard) | Streamlit · Plotly · prompt review UI | ⬜ Starts May 2026 |
+| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PNG + JSON sidecars · 25/25 tests | 🟢 Complete |
+| T3 | trading-signal-engine | Technical indicators · FinBERT sentiment · 0.6/0.4 fusion | 🟡 Building Mar 16 |
+| T4 | trading-backtester | vectorbt · Sharpe · drawdown · signal feedback loop | ⬜ Starts Mar 23 |
+| T5 | trading-dashboard | Streamlit · Plotly · prompt review UI | ⬜ Starts Mar 30 |
 
 ---
 
@@ -61,15 +61,15 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 
 | Project | Upgrade | Target |
 |---------|---------|--------|
-| [Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | Dockerize + FastAPI REST endpoint | Mar 12, 2026 |
-| [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Add async endpoints + request queuing | Mar 19, 2026 |
-| [Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Streamlit interactive simulator | Mar 26, 2026 |
-| [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | Data quality validation layer | Apr 2, 2026 |
-| [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | Apr 9, 2026 |
-| [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | Apr 23, 2026 |
-| [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | PyTorch LSTM comparison model | May 7, 2026 |
-| [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | dbt transforms layer | May 14, 2026 |
-| [Financial NLP](https://github.com/mtichikawa/financial-nlp) | PostgreSQL backend + Streamlit dashboard | May 21, 2026 |
+| [Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | Dockerize + FastAPI REST endpoint | ✅ Mar 12 |
+| [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Async endpoints + request queuing | Mar 19 |
+| [Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Streamlit interactive simulator | Apr 2 |
+| [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | Data quality validation layer | Apr 14 |
+| [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | Apr 9 |
+| [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | Apr 23 |
+| [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | PyTorch LSTM comparison model | May 7 |
+| [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | dbt transforms layer | May 14 |
+| [Financial NLP](https://github.com/mtichikawa/financial-nlp) | PostgreSQL backend + Streamlit dashboard | May 21 |
 
 ---
 
@@ -93,11 +93,11 @@ A running notebook sandbox — model comparisons, paper replications, dataset de
 
 **Cloud / Infrastructure:** AWS (S3 · Lambda · DynamoDB · CloudWatch) · Docker · FastAPI · Redis · Pydantic · boto3
 
-**LLM / NLP:** Anthropic API · multi-turn conversation · tool use · vision API · prompt engineering · prompt versioning · RAG · regex · sentiment analysis · SEC EDGAR parsing
+**LLM / NLP:** Anthropic API · Claude Code · HuggingFace · FinBERT · multi-turn conversation · tool use · prompt engineering · RAG · sentiment analysis · SEC EDGAR parsing
 
 **Visualization:** Matplotlib · mplfinance · Streamlit · Plotly
 
-**Trading Systems:** ccxt · Kraken API · OHLCV pipelines · candlestick generation · LLM vision signals · vectorbt · backtesting · outcome-driven prompt optimization
+**Trading Systems:** ccxt · Kraken API · OHLCV pipelines · mplfinance · technical indicators · FinBERT sentiment · vectorbt · backtesting · signal parameter optimization
 
 **Tools:** Git · Jupyter · Docker Compose · GitHub Actions
 
@@ -107,6 +107,3 @@ A running notebook sandbox — model comparisons, paper replications, dataset de
 
 Open to data science, data engineering, ML engineering, and analytics roles.
 [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com)
-# reviewed: logic verified
-# reviewed
-# note: see README for usage examples
