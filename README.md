@@ -32,7 +32,7 @@ Nine completed projects across a six-month window, covering the full data scienc
 | # | Project | Stack | Focus |
 |---|---------|-------|-------|
 | 1 | [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | Prophet · GitHub API · pandas | Time series forecasting · changepoint detection |
-| 2 | [Multi-Armed Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Thompson Sampling · UCB1 · Streamlit | Bayesian experimentation · live simulator |
+| 2 | [Multi-Armed Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Thompson Sampling · UCB1 · Bayesian inference | Adaptive experimentation · explore/exploit |
 | 3 | [LLM Data Analysis Assistant](https://github.com/mtichikawa/llm-data-assistant) | Anthropic API · hybrid routing · multi-turn | Applied LLM · rule-based fast path |
 | 4 | [Bias Detection in LLMs](https://github.com/mtichikawa/llm-bias-detection) | ANOVA · Cohen's d · lexicon scoring | Statistical research methodology |
 | 5 | [Real-Time Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | IsolationForest · LSTM · ensemble voting | Streaming ML · production packaging |
@@ -53,7 +53,7 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 | T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PNG + JSON sidecars · 25/25 tests | 🟢 Complete |
 | T3 | trading-signal-engine | Technical indicators · FinBERT sentiment · 0.6/0.4 fusion | 🟡 Building Mar 16 |
 | T4 | trading-backtester | vectorbt · Sharpe · drawdown · signal feedback loop | ⬜ Starts Mar 23 |
-| T5 | trading-dashboard | Streamlit · Plotly · prompt review UI | ⬜ Starts Mar 30 |
+| T5 | trading-dashboard | Streamlit · Plotly · parameter review UI | ⬜ Starts Mar 30 |
 
 ---
 
