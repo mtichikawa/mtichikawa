@@ -51,7 +51,7 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 |---|------|-------|--------|
 | T1 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | ccxt · Kraken · PostgreSQL · SQLAlchemy | 🟢 Live |
 | T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PNG + JSON sidecars · 25/25 tests | 🟢 Complete |
-| T3 | trading-signal-engine | Technical indicators · FinBERT sentiment · 0.6/0.4 fusion | 🟡 Building Mar 16 |
+| T3 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | EMA · RSI · MACD · BB · FinBERT sentiment · 51/51 tests | 🟢 Complete |
 | T4 | trading-backtester | vectorbt · Sharpe · drawdown · signal feedback loop | ⬜ Starts Mar 23 |
 | T5 | trading-dashboard | Streamlit · Plotly · parameter review UI | ⬜ Starts Mar 30 |
 
@@ -64,12 +64,18 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 | [Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | Dockerize + FastAPI REST endpoint | ✅ Mar 12 |
 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Async endpoints + request queuing | Mar 19 |
 | [Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Streamlit interactive simulator | Apr 2 |
-| [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | Data quality validation layer | Apr 14 |
-| [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | Apr 9 |
-| [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | Apr 23 |
-| [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | PyTorch LSTM comparison model | May 7 |
-| [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | dbt transforms layer | May 14 |
-| [Financial NLP](https://github.com/mtichikawa/financial-nlp) | PostgreSQL backend + Streamlit dashboard | May 21 |
+| **databricks-lakehouse** | **Medallion architecture + Delta Lake (NEW BUILD)** | **Apr 6** |
+| [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | T1→T2 integration | Apr 14 |
+| [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | Live T1 feed | Apr 14 |
+| [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | Apr 16 |
+| [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | Data quality validation layer | Apr 21 |
+| [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | FinBERT threshold tuning | Apr 28 |
+| [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | Apr 30 |
+| [trading-backtester](https://github.com/mtichikawa/trading-backtester) | Walk-forward validation | May 12 |
+| [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | PyTorch LSTM comparison model | May 14 |
+| [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | dbt transforms layer | May 21 |
+| [trading-dashboard](https://github.com/mtichikawa/trading-dashboard) | WebSocket feed | May 26 |
+| [Financial NLP](https://github.com/mtichikawa/financial-nlp) | PostgreSQL backend + Streamlit dashboard | May 28 |
 
 ---
 
