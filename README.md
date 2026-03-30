@@ -36,7 +36,7 @@ Now applying that foundation — quantitative rigor, systems thinking, productio
 
 
 
-Nine completed projects across a six-month window, covering the full data science and engineering stack. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
+Nine completed public projects across a six-month window, covering the full data science and engineering stack. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
 
 
 
@@ -61,6 +61,8 @@ Nine completed projects across a six-month window, covering the full data scienc
 | 8 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Docker · FastAPI · Redis · Pydantic v2 | MLOps · REST inference · caching |
 
 | 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet | Cloud infrastructure · data lake |
+
+| — | M365 Enterprise Software *(private)* | TypeScript · Node.js · Azure OpenAI · Microsoft Graph · MSAL · Bot Framework | Full-stack enterprise software · Microsoft 365 ecosystem |
 
 
 
@@ -164,7 +166,7 @@ A running notebook sandbox — model comparisons, paper replications, dataset de
 
 
 
-**Languages:** Python · SQL · R
+**Languages:** Python · SQL · R · TypeScript · Node.js
 
 
 
@@ -176,7 +178,7 @@ A running notebook sandbox — model comparisons, paper replications, dataset de
 
 
 
-**Cloud / Infrastructure:** AWS (S3 · Lambda · DynamoDB · CloudWatch) · Docker · FastAPI · Redis · Pydantic · boto3
+**Cloud / Infrastructure:** AWS (S3 · Lambda · DynamoDB · CloudWatch) · Azure OpenAI · Microsoft Graph API · MSAL · Bot Framework SDK · Docker · FastAPI · Redis · Pydantic · boto3
 
 
 
@@ -192,7 +194,7 @@ A running notebook sandbox — model comparisons, paper replications, dataset de
 
 
 
-**Tools:** Git · Jupyter · Docker Compose · GitHub Actions
+**Tools:** Git · Jupyter · Docker Compose · GitHub Actions · Vitest · ESLint · Prettier
 
 
 
