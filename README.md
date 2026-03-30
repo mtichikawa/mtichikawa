@@ -12,26 +12,6 @@ Portland, OR · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com
 
 
 
-<p align="center">
-
-  <img src="https://github-readme-stats.vercel.app/api?username=mtichikawa&show_icons=true&count_private=false&hide_border=true&theme=default&hide=stars" alt="GitHub stats" height="150"/>
-
-  &nbsp;&nbsp;
-
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mtichikawa&layout=compact&hide_border=true&langs_count=6&hide=jupyter+notebook" alt="Top languages" height="150"/>
-
-</p>
-
-
-
-<p align="center">
-
-  <img src="https://streak-stats.demolab.com?user=mtichikawa&theme=default&hide_border=true" alt="GitHub streak"/>
-
-</p>
-
-
-
 ---
 
 
