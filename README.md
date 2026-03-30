@@ -44,6 +44,8 @@ Nine completed public projects across a six-month window, covering the full data
 
 |---|---------|-------|-------|
 
+| — | M365 Enterprise Software *(private)* | TypeScript · Node.js · Azure OpenAI · Microsoft Graph · MSAL · Bot Framework | Full-stack enterprise software · Microsoft 365 ecosystem |
+
 | 1 | [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | Prophet · GitHub API · pandas | Time series forecasting · changepoint detection |
 
 | 2 | [Multi-Armed Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Thompson Sampling · UCB1 · Bayesian inference | Adaptive experimentation · explore/exploit |
@@ -61,8 +63,6 @@ Nine completed public projects across a six-month window, covering the full data
 | 8 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Docker · FastAPI · Redis · Pydantic v2 | MLOps · REST inference · caching |
 
 | 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet | Cloud infrastructure · data lake |
-
-| — | M365 Enterprise Software *(private)* | TypeScript · Node.js · Azure OpenAI · Microsoft Graph · MSAL · Bot Framework | Full-stack enterprise software · Microsoft 365 ecosystem |
 
 
 
