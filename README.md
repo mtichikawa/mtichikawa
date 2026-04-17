@@ -47,9 +47,9 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 
 ---
 
-## Now Building — databricks-lakehouse (Apr 13–16)
+## Most Recent Ship — [databricks-lakehouse](https://github.com/mtichikawa/databricks-lakehouse) (Apr 16)
 
-Medallion architecture (bronze → silver → gold) on Databricks Community Edition with Delta Lake. Reusing the NYC Airbnb dataset from sql-analytics-pipeline as the source, demonstrating how the same data flows through a modern lakehouse.
+Medallion lakehouse (bronze → silver → gold) on 10M NYC taxi rows with Delta Lake and row-level data quality gates between layers. Invalid records are quarantined, not silently dropped. Runs locally via the `deltalake` Python library; deployable to Databricks Community Edition.
 
 ---
 
@@ -61,7 +61,7 @@ Medallion architecture (bronze → silver → gold) on Databricks Community Edit
 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Async endpoints + request queuing | ✅ Mar 19 |
 | [ml-experiments](https://github.com/mtichikawa/ml-experiments) | C++ pybind11 rolling window extension | ✅ Apr 6 |
 | [Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Streamlit interactive simulator | ✅ Apr 9 |
-| **databricks-lakehouse** | **Medallion architecture + Delta Lake (NEW BUILD)** | **Apr 13** |
+| [databricks-lakehouse](https://github.com/mtichikawa/databricks-lakehouse) | Medallion architecture + Delta Lake (NEW BUILD) | ✅ Apr 16 |
 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | T1→T2 integration | Apr 21 |
 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | Live T1 feed | Apr 21 |
 | [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | Apr 24 |
