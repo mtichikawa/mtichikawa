@@ -16,7 +16,7 @@ Now applying that foundation — quantitative rigor, systems thinking, productio
 
 ## Portfolio Projects
 
-Sixteen public projects across a seven-month window, covering the full data science and engineering stack. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
+Sixteen public projects built over the past eighteen months, covering the full data science and engineering stack. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
 
 | # | Project | Stack | Focus |
 |---|---------|-------|-------|
@@ -40,7 +40,7 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 | # | Repo | Stack | Status |
 |---|------|-------|--------|
 | T1 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | ccxt · Kraken · PostgreSQL · SQLAlchemy | 🟢 Live |
-| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PNG + JSON sidecars · 25/25 tests | 🟢 Live |
+| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PNG + JSON sidecars · 43/43 tests | 🟢 Live |
 | T3 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | EMA · RSI · MACD · BB · FinBERT · 51/51 tests | 🟢 Live |
 | T4 | [trading-backtester](https://github.com/mtichikawa/trading-backtester) | pandas · Sharpe · Sortino · drawdown · 72/72 tests | 🟢 Live |
 | T5 | [trading-dashboard](https://github.com/mtichikawa/trading-dashboard) | Streamlit · Plotly · parameter review UI | 🟢 [Live demo](https://mtichikawa-trading.streamlit.app) |
