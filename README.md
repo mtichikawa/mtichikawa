@@ -62,9 +62,9 @@ Medallion lakehouse (bronze → silver → gold) on 10M NYC taxi rows with Delta
 | [ml-experiments](https://github.com/mtichikawa/ml-experiments) | C++ pybind11 rolling window extension | ✅ Apr 6 |
 | [Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Streamlit interactive simulator | ✅ Apr 9 |
 | [databricks-lakehouse](https://github.com/mtichikawa/databricks-lakehouse) | Medallion architecture + Delta Lake (NEW BUILD) | ✅ Apr 16 |
-| [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | T1→T2 integration | Apr 21 |
-| [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | Live T1 feed | Apr 21 |
-| [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | Apr 24 |
+| [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | T1→T2 integration | ✅ Apr 22 |
+| [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | Live T1 feed | ✅ Apr 23 |
+| [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | ✅ Apr 25 |
 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | Data quality validation layer | Apr 28 |
 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | FinBERT threshold tuning | May 4 |
 | [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | May 7 |
