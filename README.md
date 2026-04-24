@@ -14,13 +14,28 @@ Now applying that foundation — quantitative rigor, systems thinking, productio
 
 ---
 
+## Commercial · Microsoft AppSource
+
+### [Microclaw](https://microclaw.app) — AI assistant for Microsoft 365
+
+Transactable SaaS on the Microsoft Commercial Marketplace, launching on AppSource. Lives inside Microsoft Teams and lets users manage email, calendar, tasks, files, Planner, OneNote, and team communications through a single conversation with an AI agent.
+
+Built solo end-to-end: product, engineering, legal entity (Oregon LLC · EIN · USPTO trademark filed), publisher onboarding (Microsoft Partner Center · D&B DUNS), and go-to-market.
+
+**Stack:** Node.js · TypeScript · Azure OpenAI (GPT-4o / GPT-4o-mini with smart routing) · Microsoft Graph API · Microsoft Teams Bot Framework · SQLite · Microsoft Commercial Marketplace (Fulfillment API v2 + Marketplace Metering Service)
+
+**Billing:** 8-tier bracket pricing (Solo through Team-100) · $25 per seat · 1,500 pooled messages per seat · per-message metered overage · Microsoft as merchant of record
+
+**Scale:** 54 Graph tools · 12 M365 services · 200+ unit tests · two-layer permission system · per-tenant isolation
+
+---
+
 ## Portfolio Projects
 
 Sixteen public projects built over the past eighteen months, covering the full data science and engineering stack. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
 
 | # | Project | Stack | Focus |
 |---|---------|-------|-------|
-| — | M365 Enterprise Software *(private)* | TypeScript · Node.js · Azure OpenAI · Microsoft Graph · MSAL · Bot Framework | Full-stack enterprise software · Microsoft 365 ecosystem |
 | 1 | [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | Prophet · GitHub API · pandas | Time series forecasting · changepoint detection |
 | 2 | [Multi-Armed Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Thompson Sampling · UCB1 · Streamlit · Bayesian inference | Adaptive experimentation · explore/exploit |
 | 3 | [LLM Data Analysis Assistant](https://github.com/mtichikawa/llm-data-assistant) | Anthropic API · hybrid routing · multi-turn | Applied LLM · rule-based fast path |
