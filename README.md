@@ -40,11 +40,11 @@ Sixteen public projects built over the past eighteen months, covering the full d
 | 2 | [Multi-Armed Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Thompson Sampling · UCB1 · Streamlit · Bayesian inference | Adaptive experimentation · explore/exploit |
 | 3 | [LLM Data Analysis Assistant](https://github.com/mtichikawa/llm-data-assistant) | Anthropic API · hybrid routing · multi-turn | Applied LLM · rule-based fast path |
 | 4 | [Bias Detection in LLMs](https://github.com/mtichikawa/llm-bias-detection) | ANOVA · Cohen's d · lexicon scoring | Statistical research methodology |
-| 5 | [Real-Time Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | IsolationForest · LSTM · FastAPI · Docker · ensemble voting | Streaming ML · production packaging |
+| 5 | [Real-Time Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | IsolationForest · LSTM · LightGBM · FastAPI · Docker · ensemble voting | Streaming ML · production packaging |
 | 6 | [Financial NLP Parser](https://github.com/mtichikawa/financial-nlp) | SEC EDGAR · regex · sentiment lexicon | NLP · financial data extraction |
 | 7 | [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | PostgreSQL · SQLAlchemy · dbt-style transforms | Data engineering · layered transforms |
 | 8 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Docker · FastAPI · Redis · Pydantic v2 · async | MLOps · REST inference · caching |
-| 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet | Cloud infrastructure · data lake |
+| 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet · in-pipeline DQ layer | Cloud infrastructure · data lake · data quality |
 
 ---
 
@@ -62,9 +62,9 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 
 ---
 
-## Most Recent Ship — [databricks-lakehouse](https://github.com/mtichikawa/databricks-lakehouse) (Apr 16)
+## Most Recent Ship — [anomaly-detection](https://github.com/mtichikawa/anomaly-detection) LightGBM upgrade (Apr 30)
 
-Medallion lakehouse (bronze → silver → gold) on 10M NYC taxi rows with Delta Lake and row-level data quality gates between layers. Invalid records are quarantined, not silently dropped. Runs locally via the `deltalake` Python library; deployable to Databricks Community Edition.
+Added a fourth detector to the streaming ensemble: a LightGBM gradient-boosted classifier trained on engineered rolling-window features alongside the existing Isolation Forest, LSTM autoencoder, and Z-score detectors. Mixing supervised and unsupervised in one ensemble keeps recall high without inflating false positives, and the new training script lets the supervised detector learn from labeled history rather than relying purely on outlier geometry.
 
 ---
 
@@ -80,7 +80,9 @@ Medallion lakehouse (bronze → silver → gold) on 10M NYC taxi rows with Delta
 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | T1→T2 integration | ✅ Apr 22 |
 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | Live T1 feed | ✅ Apr 23 |
 | [Bias Detection](https://github.com/mtichikawa/llm-bias-detection) | Second dataset + cross-model comparison | ✅ Apr 25 |
-| [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | Data quality validation layer | Apr 28 |
+| [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | In-pipeline data quality layer + Lambda quarantine cross-check | ✅ Apr 28 |
+| [Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | LightGBM as fourth ensemble detector (supervised) | ✅ Apr 30 |
+| [Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Smoke tests + GitHub Actions CI | ✅ May 1 |
 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | FinBERT threshold tuning | May 4 |
 | [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | May 7 |
 | [trading-backtester](https://github.com/mtichikawa/trading-backtester) | Walk-forward validation + buy-and-hold benchmark | May 12 |
