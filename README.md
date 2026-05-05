@@ -8,31 +8,39 @@ Portland, OR · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com
 
 ## Background
 
-BS Mechanical Engineering, MS Mathematics. Three years as a Physical Design Engineer at Intel (Ivy Bridge / 22nm). Nine years as Mathematics Faculty at Santa Rosa Junior College (statistics, calculus, linear algebra).
-
-Now applying that foundation — quantitative rigor, systems thinking, production engineering experience — to data science and machine learning.
+BS Mechanical Engineering (UC Berkeley), then three years as a Physical Design Engineer at Intel on Ivy Bridge (22nm). MS Mathematics (CCNY), then nine years as Mathematics Faculty at Santa Rosa Junior College, teaching algebra through calculus III, linear algebra, differential equations, and statistics. Now Founder and Engineer at Microclaw LLC.
 
 ---
 
-## Commercial · Microsoft AppSource
+## Founded · Microclaw
 
-### [Microclaw](https://microclaw.app) — AI assistant for Microsoft 365
+### [Microclaw](https://microclaw.app) — production AI agent for Microsoft 365
 
-Transactable SaaS on the Microsoft Commercial Marketplace, launching on AppSource. Lives inside Microsoft Teams and lets users manage email, calendar, tasks, files, Planner, OneNote, and team communications through a single conversation with an AI agent.
+Submitted to the Microsoft Commercial Marketplace. Lives inside Microsoft Teams and operates across Microsoft 365 (email, calendar, tasks, files, notes, channels) through a single conversation. Built solo end-to-end. **The headline isn't the commerce; it's the agent.**
 
-Built solo end-to-end: product, engineering, legal entity (Oregon LLC · EIN · USPTO trademark filed), publisher onboarding (Microsoft Partner Center · D&B DUNS), and go-to-market.
+**KNN tool selection.** k=7, 0.80 confidence threshold, cosine-similarity fallback over 1,020 synthetic training examples. 95.0% recall vs 92.7% embedding-only baseline. 6.4 tools selected per request vs 18. ~60% input-token reduction.
 
-**Stack:** Node.js · TypeScript · Azure OpenAI (GPT-4o / GPT-4o-mini with smart routing) · Microsoft Graph API · Microsoft Teams Bot Framework · SQLite · Microsoft Commercial Marketplace (Fulfillment API v2 + Marketplace Metering Service)
+**Semantic memory retrieval.** Per-user persistent memory with cosine-similarity retrieval (RAG pattern). Conversation-history compression preserves entity references through structured tool-call summaries.
 
-**Billing:** 8-tier bracket pricing (Solo through Team-100) · $25 per seat · 1,500 pooled messages per seat · per-message metered overage · Microsoft as merchant of record
+**Smart model router.** GPT-4o-mini default, escalates to GPT-4o on complexity signals or mid-conversation tool-call escalation. Cost and latency are explicit design variables.
 
-**Scale:** 54 Graph tools · 12 M365 services · 200+ unit tests · two-layer permission system · per-tenant isolation
+**In-house eval framework.** 75 tests with expected-facts scoring, accuracy and quality grading, A/B comparison against a baseline bot. 29 iterative testing rounds before submission.
+
+**Natural-language automations.** Users describe IFTTT-style rules in plain English; the agent parses intent into structured SQLite rules, fired in real-time via Microsoft Graph change-notification webhooks.
+
+**Multi-tenant SaaS.** Microsoft Entra delegated auth, per-tenant isolation (tenantId on every row), two-layer permission system (Microsoft org-level plus per-user app-level toggles).
+
+**Stack:** TypeScript · Node.js · Azure OpenAI · Microsoft Graph · Teams Bot Framework SDK · SQLite (28 migrations) · KNN retrieval · cosine similarity · cron-parser · 200+ unit tests
+
+**Marketplace integration:** Fulfillment API v2 + Marketplace Metering Service · 8-tier bracket pricing (Solo through Team-100) · $25 per seat · 1,500 pooled messages per seat · per-message metered overage · Microsoft as merchant of record
+
+Built solo end-to-end: product, engineering, Oregon LLC, EIN, USPTO trademark, Microsoft Partner Center onboarding (D&B DUNS), brand identity, three showcase videos, go-to-market.
 
 ---
 
 ## Portfolio Projects
 
-Sixteen public projects built over the past eighteen months, covering the full data science and engineering stack. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
+Sixteen public projects built over the past eighteen months: ten portfolio projects below, the five-repo trading arc that follows, and the [ml-experiments](https://github.com/mtichikawa/ml-experiments) sandbox. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
 
 | # | Project | Stack | Focus |
 |---|---------|-------|-------|
@@ -45,6 +53,7 @@ Sixteen public projects built over the past eighteen months, covering the full d
 | 7 | [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | PostgreSQL · SQLAlchemy · dbt-style transforms | Data engineering · layered transforms |
 | 8 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Docker · FastAPI · Redis · Pydantic v2 · async | MLOps · REST inference · caching |
 | 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet · in-pipeline DQ layer | Cloud infrastructure · data lake · data quality |
+| 10 | [Databricks Lakehouse](https://github.com/mtichikawa/databricks-lakehouse) | Delta Lake · medallion architecture · pandas · row-level data quality gates | Lakehouse architecture · 10M-row NYC taxi dataset |
 
 ---
 
@@ -62,13 +71,13 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 
 ---
 
-## Most Recent Ship — [anomaly-detection](https://github.com/mtichikawa/anomaly-detection) LightGBM upgrade (Apr 30)
+## Most Recent Ship — [bandit-ab-testing](https://github.com/mtichikawa/bandit-ab-testing) smoke tests + CI (May 1)
 
-Added a fourth detector to the streaming ensemble: a LightGBM gradient-boosted classifier trained on engineered rolling-window features alongside the existing Isolation Forest, LSTM autoencoder, and Z-score detectors. Mixing supervised and unsupervised in one ensemble keeps recall high without inflating false positives, and the new training script lets the supervised detector learn from labeled history rather than relying purely on outlier geometry.
+Added 19 smoke tests parametrized across all three algorithms (Thompson Sampling, UCB1, Epsilon-Greedy) covering construction, arm selection, update + best-arm, end-to-end simulation, seed reproducibility, and high-rate-arm-wins sanity. Added the GitHub Actions CI workflow. Closes the test-coverage gap left by the Apr 9 Streamlit upgrade.
 
 ---
 
-## Scheduled Upgrades (Apr–May 2026)
+## Recent and Scheduled Upgrades
 
 | Project | Upgrade | Target |
 |---------|---------|--------|
@@ -139,6 +148,6 @@ A running notebook sandbox — model comparisons, paper replications, dataset de
 
 ## Contact
 
-Open to data science, data engineering, ML engineering, and analytics roles.
+Talking with teams about data science, ML engineering, data engineering, and AI engineering roles.
 
 [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [LinkedIn](https://www.linkedin.com/in/mike-ichikawa-9144a73b5/)
