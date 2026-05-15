@@ -6,12 +6,6 @@ Portland, OR · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com
 
 ---
 
-## Background
-
-BS Mechanical Engineering (UC Berkeley), then three years as a Physical Design Engineer at Intel on Ivy Bridge (22nm). MS Mathematics (CCNY), then nine years as Mathematics Faculty at Santa Rosa Junior College, teaching algebra through calculus III, linear algebra, differential equations, and statistics. Now Founder and Engineer at Microclaw LLC.
-
----
-
 ## Founded · Microclaw
 
 ### [Microclaw](https://microclaw.app): production AI agent for Microsoft 365
@@ -34,7 +28,7 @@ Submitted to the Microsoft Commercial Marketplace. A retrieval-augmented AI agen
 
 **Marketplace integration:** Standard + Self-Hosted offerings · Fulfillment API v2 + Marketplace Metering Service · 8-tier bracket pricing (Solo through Team-100) · $25 per seat · 1,500 pooled messages per seat · per-message metered overage · Microsoft as merchant of record
 
-Built solo end-to-end: product, engineering, Oregon LLC, EIN, USPTO trademark, Microsoft Partner Center onboarding (D&B DUNS), brand identity, three showcase videos, go-to-market.
+Built solo end-to-end: product, engineering, Oregon LLC, EIN, USPTO trademark, Microsoft Partner Center onboarding (D&B DUNS), brand identity, three product videos, and go-to-market.
 
 ---
 
@@ -57,9 +51,9 @@ Sixteen public projects built over the past eighteen months: ten portfolio proje
 
 ---
 
-## Trading System Arc — Complete ✅
+## Trading System Arc · Complete ✅
 
-Five interconnected repos building an end-to-end paper trading system: live market data → chart generation → dual-path signal analysis (technical indicators + FinBERT sentiment) → backtesting → oversight dashboard. Entirely free to run — no paid APIs.
+Five interconnected repos building an end-to-end paper trading system: live market data, chart generation, dual-path signal analysis (technical indicators + FinBERT sentiment), backtesting, and an oversight dashboard. Entirely free to run, no paid APIs.
 
 | # | Repo | Stack | Status |
 |---|------|-------|--------|
@@ -71,7 +65,7 @@ Five interconnected repos building an end-to-end paper trading system: live mark
 
 ---
 
-## Most Recent Ship — [bandit-ab-testing](https://github.com/mtichikawa/bandit-ab-testing) smoke tests + CI (May 1)
+## Most Recent Ship · [bandit-ab-testing](https://github.com/mtichikawa/bandit-ab-testing) smoke tests + CI (May 1)
 
 Added 19 smoke tests parametrized across all three algorithms (Thompson Sampling, UCB1, Epsilon-Greedy) covering construction, arm selection, update + best-arm, end-to-end simulation, seed reproducibility, and high-rate-arm-wins sanity. Added the GitHub Actions CI workflow. Closes the test-coverage gap left by the Apr 9 Streamlit upgrade.
 
@@ -92,9 +86,9 @@ Added 19 smoke tests parametrized across all three algorithms (Thompson Sampling
 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | In-pipeline data quality layer + Lambda quarantine cross-check | ✅ Apr 28 |
 | [Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | LightGBM as fourth ensemble detector (supervised) | ✅ Apr 30 |
 | [Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Smoke tests + GitHub Actions CI | ✅ May 1 |
-| [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | FinBERT threshold tuning | May 4 |
-| [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | May 7 |
-| [trading-backtester](https://github.com/mtichikawa/trading-backtester) | Walk-forward validation + buy-and-hold benchmark | May 12 |
+| [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | FinBERT threshold tuning | ✅ May 4 |
+| [LLM Data Assistant](https://github.com/mtichikawa/llm-data-assistant) | Newer model + conversation history | ✅ May 7 |
+| [trading-backtester](https://github.com/mtichikawa/trading-backtester) | Walk-forward validation + buy-and-hold benchmark | ✅ May 12 |
 | [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | PyTorch LSTM comparison model | May 14 |
 | [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | dbt transforms layer | May 21 |
 | [trading-dashboard](https://github.com/mtichikawa/trading-dashboard) | WebSocket feed | May 26 |
@@ -102,7 +96,7 @@ Added 19 smoke tests parametrized across all three algorithms (Thompson Sampling
 
 ---
 
-## Roadmap — New Builds (Jun–Jul 2026)
+## Roadmap · New Builds (Jun-Jul 2026)
 
 | Project | Stack | Target |
 |---------|-------|--------|
@@ -113,13 +107,13 @@ Added 19 smoke tests parametrized across all three algorithms (Thompson Sampling
 
 ---
 
-## Tinkering — [ml-experiments](https://github.com/mtichikawa/ml-experiments)
+## Tinkering · [ml-experiments](https://github.com/mtichikawa/ml-experiments)
 
-A running notebook sandbox — model comparisons, paper replications, dataset deep dives. Not portfolio pieces; just thinking out loud.
+A running notebook sandbox of model comparisons, paper replications, and dataset explorations. Not portfolio pieces; just thinking out loud.
 
 | Notebook | What I was exploring |
 |----------|---------------------|
-| [XGBoost vs LightGBM vs RF — Wine Quality](https://github.com/mtichikawa/ml-experiments/blob/main/comparisons/2026-03-02-xgboost-lgbm-rf-wine-quality.ipynb) | Accuracy, AUC, training time, feature importance comparison |
+| [XGBoost vs LightGBM vs RF, Wine Quality](https://github.com/mtichikawa/ml-experiments/blob/main/comparisons/2026-03-02-xgboost-lgbm-rf-wine-quality.ipynb) | Accuracy, AUC, training time, feature importance comparison |
 | [C++ Rolling Window via pybind11](https://github.com/mtichikawa/ml-experiments) | Performance comparison: C++ extension vs NumPy vs pandas rolling |
 
 ---
@@ -140,9 +134,15 @@ A running notebook sandbox — model comparisons, paper replications, dataset de
 
 **Trading Systems:** ccxt · Kraken API · OHLCV pipelines · technical indicators · FinBERT sentiment · pandas backtesting · signal parameter optimization
 
-**Native Extensions:** C++ · pybind11 · CMake — Python/C++ interop for performance-critical paths
+**Native Extensions:** C++ · pybind11 · CMake · Python/C++ interop for performance-critical paths
 
 **Tools:** Git · GitHub Actions (CI) · Jupyter · Docker Compose · Vitest · ESLint · Prettier
+
+---
+
+## Background
+
+BS Mechanical Engineering (UC Berkeley), then three years as a Physical Design Engineer at Intel on Ivy Bridge (22nm). MS Mathematics (CCNY), then nine years as Mathematics Faculty at Santa Rosa Junior College, teaching algebra through calculus III, linear algebra, differential equations, and statistics.
 
 ---
 
