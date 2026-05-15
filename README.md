@@ -14,25 +14,25 @@ BS Mechanical Engineering (UC Berkeley), then three years as a Physical Design E
 
 ## Founded · Microclaw
 
-### [Microclaw](https://microclaw.app) — production AI agent for Microsoft 365
+### [Microclaw](https://microclaw.app): production AI agent for Microsoft 365
 
-Submitted to the Microsoft Commercial Marketplace. Lives inside Microsoft Teams and operates across Microsoft 365 (email, calendar, tasks, files, notes, channels) through a single conversation. Built solo end-to-end. **The headline isn't the commerce; it's the agent.**
+Submitted to the Microsoft Commercial Marketplace. A retrieval-augmented AI agent that lives inside Microsoft Teams and operates across Microsoft 365 (email, calendar, tasks, files, notes, channels) through a single conversation. Built solo end-to-end. **The headline isn't the commerce; it's the agent.**
 
-**KNN tool selection.** k=7, 0.80 confidence threshold, cosine-similarity fallback over 1,020 synthetic training examples. 95.0% recall vs 92.7% embedding-only baseline. 6.4 tools selected per request vs 18. ~60% input-token reduction.
+**KNN tool selection.** k=7, 0.80 confidence threshold, cosine-similarity fallback over 1,020 synthetic training examples (using `text-embedding-3-small`). 95.0% recall vs 92.7% embedding-only baseline. 6.4 tools selected per request vs 18. ~60% input-token reduction.
 
-**Semantic memory retrieval.** Per-user persistent memory with cosine-similarity retrieval (RAG pattern). Conversation-history compression preserves entity references through structured tool-call summaries.
+**Semantic memory retrieval (RAG).** Per-user persistent memory with cosine-similarity retrieval. Conversation-history compression preserves entity references through structured tool-call summaries.
 
-**Smart model router.** GPT-4o-mini default, escalates to GPT-4o on complexity signals or mid-conversation tool-call escalation. Cost and latency are explicit design variables.
+**Smart model router.** GPT-4o-mini default, escalates to GPT-4o on complexity signals or mid-conversation tool-call escalation. **17× cheaper for simple queries** vs always-on 4o.
 
 **In-house eval framework.** 75 tests with expected-facts scoring, accuracy and quality grading, A/B comparison against a baseline bot. 29 iterative testing rounds before submission.
 
-**Natural-language automations.** Users describe IFTTT-style rules in plain English; the agent parses intent into structured SQLite rules, fired in real-time via Microsoft Graph change-notification webhooks.
+**Natural-language automations.** Users describe IFTTT-style rules in plain English; the agent parses intent into structured rules in Postgres, fired in real-time via Microsoft Graph change-notification webhooks.
 
-**Multi-tenant SaaS.** Microsoft Entra delegated auth, per-tenant isolation (tenantId on every row), two-layer permission system (Microsoft org-level plus per-user app-level toggles).
+**Multi-tenant SaaS.** Microsoft Entra delegated auth, per-tenant database isolation (tenantId on every row), two-layer permission system (Microsoft org-level plus per-user app-level toggles).
 
-**Stack:** TypeScript · Node.js · Azure OpenAI · Microsoft Graph · Teams Bot Framework SDK · SQLite (28 migrations) · KNN retrieval · cosine similarity · cron-parser · 200+ unit tests
+**Stack:** TypeScript · Node.js · Azure OpenAI (`gpt-4o`, `gpt-4o-mini`, `text-embedding-3-small`) · Microsoft Graph (85 tools across 12 M365 services) · Teams Bot Framework SDK · MSAL · Azure Database for PostgreSQL · `node-postgres` · Bicep (IaC) · Docker (multi-stage) · GitHub Actions → GHCR · Vitest (290 unit tests) · KNN retrieval · cosine similarity · cron-parser
 
-**Marketplace integration:** Fulfillment API v2 + Marketplace Metering Service · 8-tier bracket pricing (Solo through Team-100) · $25 per seat · 1,500 pooled messages per seat · per-message metered overage · Microsoft as merchant of record
+**Marketplace integration:** Standard + Self-Hosted offerings · Fulfillment API v2 + Marketplace Metering Service · 8-tier bracket pricing (Solo through Team-100) · $25 per seat · 1,500 pooled messages per seat · per-message metered overage · Microsoft as merchant of record
 
 Built solo end-to-end: product, engineering, Oregon LLC, EIN, USPTO trademark, Microsoft Partner Center onboarding (D&B DUNS), brand identity, three showcase videos, go-to-market.
 
