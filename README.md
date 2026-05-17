@@ -10,7 +10,7 @@ Portland, OR · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com
 
 ### [Microclaw](https://microclaw.app): production AI agent for Microsoft 365
 
-Submitted to the Microsoft Commercial Marketplace. A retrieval-augmented AI agent that lives inside Microsoft Teams and operates across Microsoft 365 (email, calendar, tasks, files, notes, channels) through a single conversation. Built solo end-to-end. **The headline isn't the commerce; it's the agent.**
+[Live on the Microsoft Commercial Marketplace](https://marketplace.microsoft.com/en-us/product/saas/microclaw.microclaw?tab=Overview). A retrieval-augmented AI agent that lives inside Microsoft Teams and operates across Microsoft 365 (email, calendar, tasks, files, notes, channels) through a single conversation. Built solo end-to-end. **The headline isn't the commerce; it's the agent.**
 
 **KNN tool selection.** k=7, 0.80 confidence threshold, cosine-similarity fallback over 1,020 synthetic training examples (using `text-embedding-3-small`). 95.0% recall vs 92.7% embedding-only baseline. 6.4 tools selected per request vs 18. ~60% input-token reduction.
 
