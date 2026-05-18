@@ -34,7 +34,7 @@ Built solo end-to-end: product, engineering, Oregon LLC, EIN, USPTO trademark, M
 
 ## Portfolio Projects
 
-Sixteen public projects built over the past eighteen months: ten portfolio projects below, the five-repo trading arc that follows, and the [ml-experiments](https://github.com/mtichikawa/ml-experiments) sandbox. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
+Seventeen public projects built over the past eighteen months: eleven portfolio projects below, the five-repo trading arc that follows, and the [ml-experiments](https://github.com/mtichikawa/ml-experiments) sandbox. Live interactive demos for Projects 2 and 5 at [mtichikawa.github.io](https://mtichikawa.github.io).
 
 | # | Project | Stack | Focus |
 |---|---------|-------|-------|
@@ -48,6 +48,7 @@ Sixteen public projects built over the past eighteen months: ten portfolio proje
 | 8 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Docker · FastAPI · Redis · Pydantic v2 · async | MLOps · REST inference · caching |
 | 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet · in-pipeline DQ layer | Cloud infrastructure · data lake · data quality |
 | 10 | [Databricks Lakehouse](https://github.com/mtichikawa/databricks-lakehouse) | Delta Lake · medallion architecture · pandas · row-level data quality gates | Lakehouse architecture · 10M-row NYC taxi dataset |
+| 11 | [GCP RAG Pipeline](https://github.com/mtichikawa/gcp-rag-pipeline) | BigQuery Vector Search · Vertex AI Gemini · LangChain · LlamaIndex · FAISS · pgvector · Cloud Run | Production RAG · SEC EDGAR corpus · 6-combo eval matrix |
 
 ---
 
