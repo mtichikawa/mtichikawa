@@ -49,6 +49,7 @@ Seventeen public projects built over the past eighteen months: eleven portfolio 
 | 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet · in-pipeline DQ layer | Cloud infrastructure · data lake · data quality |
 | 10 | [Databricks Lakehouse](https://github.com/mtichikawa/databricks-lakehouse) | Delta Lake · medallion architecture · pandas · row-level data quality gates | Lakehouse architecture · 10M-row NYC taxi dataset |
 | 11 | [GCP RAG Pipeline](https://github.com/mtichikawa/gcp-rag-pipeline) | BigQuery Vector Search · Vertex AI Gemini · LangChain · LlamaIndex · FAISS · pgvector · Cloud Run | Production RAG · SEC EDGAR corpus · 6-combo eval matrix |
+| 12 | [Streaming Analytics Pipeline](https://github.com/mtichikawa/streaming-analytics-pipeline) | Redpanda · Spark Structured Streaming · Delta Lake · Streamlit · watermarking | Real-time streaming · 5m OHLCV · z-score anomaly · exactly-once recovery |
 
 ---
 
