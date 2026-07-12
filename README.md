@@ -1,4 +1,4 @@
-# Michael Ichikawa
+# Mike Ichikawa
 
 ### I build AI agents and the multi-agent systems that coordinate them.
 
