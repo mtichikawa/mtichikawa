@@ -1,76 +1,44 @@
 # Mike Ichikawa
 
-### I build AI agents and the multi-agent systems that coordinate them.
+### I build production AI agents, and the evaluations every build has to pass.
 
-**AI / ML Engineer** · Portland, OR · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io) · [Resume](https://mtichikawa.github.io/resume.html)
+**Founding AI/ML Engineer** · Portland, OR · Remote · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io) · [Résumé](https://mtichikawa.github.io/resume.html)
 
-MS Mathematics · BS Mechanical Engineering (UC Berkeley) · three years of semiconductor physical design at Intel · eight years teaching college math.
-
----
-
-## Flagship work
-
-Two builds, one identity: a **dedicated production agent** I shipped, and a **from-scratch multi-agent engine** that orchestrates many. One proves I can ship real production AI; the other proves I can build the coordination layer.
-
-### 🟢 [Microclaw](https://microclaw.app) — a production AI agent for Microsoft 365
-
-**[Live on the Microsoft Commercial Marketplace.](https://marketplace.microsoft.com/en-us/product/saas/microclaw.microclaw?tab=Overview)** Built solo, end to end. One AI agent that works across 12 Microsoft 365 services through 85 function-calling tools, inside a single Teams conversation. The headline isn't the commerce, it's the agent.
-
-- **Agent loop** — iterative plan/act/observe over 85 tools (Azure OpenAI, function-calling) with multi-layer failure recovery.
-- **KNN tool retrieval** — k=7, cosine-similarity fallback; **95.0% recall vs a 92.7% embedding-only baseline** (benchmarked at 1,020 examples), ~6 tools selected per request vs 18, ~33% fewer input tokens.
-- **RAG semantic memory** — per-user persistent memory retrieved by cosine similarity; structured tool-call compression preserves entity references across turns.
-- **Smart model router** — GPT-4o-mini default, escalates to GPT-4o on complexity; ~17× cheaper on simple queries.
-- **In-house eval framework** — 107 hand-written tests with expected-facts scoring and A/B against a baseline bot; gated every release.
-- **Natural-language automations** — plain-English rules parsed to structured Postgres rules, fired in real time via Microsoft Graph webhooks.
-- **Multi-tenant** — Microsoft Entra delegated auth, Postgres row-level security, `tenantId` on every row.
-
-`TypeScript` · `Azure OpenAI` · `Microsoft Graph` · `Teams Bot Framework SDK` · `Azure Postgres (RLS)` · `Bicep` · `Docker → GHCR` · `374 Vitest tests`. Transactable SaaS on the Marketplace (Standard + Self-Hosted).
-
-### 🔷 [Multi-Agent Workflow Engine](https://mtichikawa.github.io/workflow-engine/) — built from scratch
-
-**[Interactive writeup →](https://mtichikawa.github.io/workflow-engine/)** Modular AI specialists that each do one job with fixed input/output contracts, composed into validated control-flow graphs and run on a concurrency-safe single-writer board with human approval gates and a per-example learning loop.
-
-- A **static validator** rejects unsound graphs before they run (loop-termination guards, contract compatibility, reachability).
-- A **composer** writes new workflows from plain English and refuses to mark one runnable when a required specialist is missing — it doesn't fake capability.
-- **Measured learning loop** — a deliberately weak specialist went **50% → 100%** on a held-out eval from six curated examples, no fine-tuning.
-
-`Python` · `agent orchestration` · `contracts + recipes` · `static graph validation` · `few-shot retrieval` · `LLM-as-judge`. Engine source private; walkthrough on request.
+MS Mathematics · BS Mechanical Engineering, UC Berkeley · three years of semiconductor physical design at Intel · eight years teaching college mathematics.
 
 ---
 
-## The broader body of work
+An AI agent that picks the wrong action doesn't crash. It does something adjacent, reports success, and looks exactly like one that got it right. Everything below is either a system with that property, or the measurement that catches it.
 
-Beyond the two flagships, a dozen self-directed public projects across the data and ML stack. Live interactive demos for #2 and #5 at [mtichikawa.github.io](https://mtichikawa.github.io).
+## A production AI agent for Microsoft 365
 
-| # | Project | Stack | Focus |
-|---|---------|-------|-------|
-| 1 | [GitHub Trend Forecaster](https://github.com/mtichikawa/github-trend-forecaster) | Prophet · GitHub API · pandas | Time-series forecasting · changepoint detection |
-| 2 | [Multi-Armed Bandit A/B Testing](https://github.com/mtichikawa/bandit-ab-testing) | Thompson Sampling · UCB1 · Streamlit · Bayesian inference | Adaptive experimentation · explore/exploit |
-| 3 | [LLM Data Analysis Assistant](https://github.com/mtichikawa/llm-data-assistant) | Anthropic API · hybrid routing · multi-turn | Applied LLM · rule-based fast path |
-| 4 | [Bias Detection in LLMs](https://github.com/mtichikawa/llm-bias-detection) | ANOVA · Cohen's d · lexicon scoring | Statistical research methodology |
-| 5 | [Real-Time Anomaly Detection](https://github.com/mtichikawa/anomaly-detection) | IsolationForest · LSTM · LightGBM · FastAPI · Docker · ensemble voting | Streaming ML · production packaging |
-| 6 | [Financial NLP Parser](https://github.com/mtichikawa/financial-nlp) | SEC EDGAR · regex · sentiment lexicon | NLP · financial data extraction |
-| 7 | [SQL Analytics Pipeline](https://github.com/mtichikawa/sql-analytics-pipeline) | PostgreSQL · SQLAlchemy · dbt-style transforms | Data engineering · layered transforms |
-| 8 | [Dockerized ML API](https://github.com/mtichikawa/dockerized-ml-api) | Docker · FastAPI · Redis · Pydantic v2 · async | MLOps · REST inference · caching |
-| 9 | [Cloud ETL Pipeline](https://github.com/mtichikawa/cloud-etl-pipeline) | AWS S3 · Lambda · DynamoDB · Parquet · in-pipeline DQ | Cloud infrastructure · data lake · data quality |
-| 10 | [Databricks Lakehouse](https://github.com/mtichikawa/databricks-lakehouse) | Delta Lake · medallion · row-level quality gates | Lakehouse architecture · 10M-row NYC taxi dataset |
-| 11 | [GCP RAG Pipeline](https://github.com/mtichikawa/gcp-rag-pipeline) | BigQuery Vector Search · Vertex AI Gemini · LangChain · LlamaIndex · Cloud Run | Production-shape RAG · SEC EDGAR corpus · 6-combo eval |
-| 12 | [Streaming Analytics Pipeline](https://github.com/mtichikawa/streaming-analytics-pipeline) | Redpanda · Spark Structured Streaming · Delta Lake · Streamlit | Real-time streaming · 5m OHLCV · z-score anomaly · exactly-once recovery |
+**[Live on the Microsoft Commercial Marketplace.](https://marketplace.microsoft.com/en-us/product/saas/microclaw.microclaw?tab=Overview)** Built solo — product, engineering, infrastructure and compliance. It lives in Microsoft Teams: you ask for something in plain language and it works out which actions to take across mail, calendar and files, checks what comes back, and keeps going until the job is done. It passed AppSource certification. It has no paying customers.
 
----
+- **Tool selection.** 85 function-calling tools across 12 skill modules. Retrieval narrows them to a mean of 26 per request before the model sees anything — a **46% cut in input tokens**, measured with tiktoken against the provider's own prompt counts, not estimated. KNN selection scored **95.0% recall against a 92.7% embedding-only baseline, on 1,020 synthetic queries**.
+- **Evaluation.** A hand-written suite scoring each answer on the facts it must contain and the facts it must never claim — a case asking for a *draft* forbids "email sent," because an agent that sends it and reports success has done the wrong thing and sounded finished doing it. Run against a baseline every build.
+- **Failure handling.** Backoff honouring `Retry-After`; rate-limit waits bounded twice over, because an earlier version retried forever and left someone waiting hours for a reply; timeout compaction; a repeat guard that blocks a looping call and tells the model to try another approach rather than killing the turn; a hard cap at 35 tool calls.
+- **Multi-tenant isolation.** Postgres row-level security with `FORCE` on 27 tables, fail-closed by construction — with no tenant context bound, a forgotten `WHERE` returns zero rows rather than someone else's data. A small, named set of cron and metering paths bypasses it deliberately, as a separate role.
+- **RAG semantic memory**, natural-language automations fired by Graph webhooks, and model routing that escalates only when a turn gets complicated.
 
-## Trading System Arc · complete
+`TypeScript` · `Azure OpenAI` · `Microsoft Graph` · `Azure Postgres (RLS)` · `Azure Container Apps` · `Bicep` · `Docker → GHCR via GitHub Actions` · 404 tests
 
-Five interconnected repos: live market data → chart generation → dual-path signals (technical indicators + FinBERT sentiment) → backtesting → an oversight dashboard, with losing trades feeding back to tune signal parameters. Free to run, no paid APIs. (An engineering showcase, not a claim of market edge.)
+## [A multi-agent workflow engine](https://mtichikawa.github.io/workflow-engine/)
 
-| # | Repo | Stack | Status |
-|---|------|-------|--------|
-| T1 | [crypto-data-pipeline](https://github.com/mtichikawa/crypto-data-pipeline) | ccxt · Kraken · PostgreSQL · SQLAlchemy | 🟢 Live |
-| T2 | [trading-chart-generator](https://github.com/mtichikawa/trading-chart-generator) | mplfinance · PNG + JSON sidecars · 43/43 tests | 🟢 Live |
-| T3 | [trading-signal-engine](https://github.com/mtichikawa/trading-signal-engine) | EMA · RSI · MACD · BB · FinBERT · 84/84 tests | 🟢 Live |
-| T4 | [trading-backtester](https://github.com/mtichikawa/trading-backtester) | pandas · Sharpe · Sortino · drawdown · 72/72 tests | 🟢 Live |
-| T5 | [trading-dashboard](https://github.com/mtichikawa/trading-dashboard) | Streamlit · Plotly · parameter review UI | 🟢 [Live demo](https://mtichikawa-trading.streamlit.app) |
+Plain-English requests become validated control-flow graphs of single-purpose agents. **[Interactive walkthrough →](https://mtichikawa.github.io/workflow-engine/)**
+
+- A **static validator** with nine checks rejects unsound graphs before a single model call. It distinguishes what should block from what should only warn — a step whose one exit is conditional still runs, because a deliberate endpoint is legitimate, but you are told before the run rather than discovering a short result afterwards.
+- **Specialists are a shared library**, one instance each, reused across workflows — enforced by object identity in a test, not by convention.
+- A **learning loop** improved a weak specialist from 4/8 to 8/8 on an independent eval from six curated examples, with no fine-tuning.
+- Speaks **MCP in both directions**: calls external MCP tools, and publishes its own workflows as MCP tools.
+
+## What it takes to stump a coding agent
+
+138 probe environments built to find a task a frontier coding agent could not solve.
+
+- **The finding: complexity does not defeat comprehension.** 31 of 33 probes were solved, in one pass, with no iteration language in the logs. Adding defects or coupling them changes nothing. What worked was motion, opacity, and systematically misleading evidence.
+- **The resulting task fails `claude-opus-5` at max reasoning and `gpt-5.6-sol` at xhigh, three trials each**, under the benchmark's own CI configuration. Oracle 1.000, no-op 0.000, and 22 of 22 repository static checks pass.
+- **The measurement lied twice and both are in the record** — a backgrounded process that died in three seconds voided 71 runs while looking like results, and an over-precise verifier failed a correct answer on the sixteenth significant digit and manufactured a survivor that was not one.
 
 ---
 
-[mtichikawa.github.io](https://mtichikawa.github.io) · [Resume](https://mtichikawa.github.io/resume.html) · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com)
+Earlier work — forecasting, anomaly detection, NLP, cloud ETL, a Databricks lakehouse, streaming analytics, a paper-trading arc — sits in the repositories below. It was built in a different era of the job, before agentic coding, while I was learning the ropes.
