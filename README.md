@@ -31,7 +31,7 @@ Plain-English requests become validated control-flow graphs of single-purpose ag
 - A **learning loop** improved a weak specialist from 4/8 to 8/8 on an independent eval from six curated examples, with no fine-tuning.
 - Speaks **MCP in both directions**: calls external MCP tools, and publishes its own workflows as MCP tools.
 
-## What it takes to stump a coding agent
+## [What it takes to stump a coding agent](https://github.com/mtichikawa/klavis-tb3-submission)
 
 138 probe environments built to find a task a frontier coding agent could not solve.
 
