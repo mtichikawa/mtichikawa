@@ -4,7 +4,7 @@
 
 **Founding AI/ML Engineer** · Portland, OR · Remote · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io) · [Résumé](https://mtichikawa.github.io/resume.html)
 
-MS Mathematics · BS Mechanical Engineering, UC Berkeley · three years of semiconductor physical design at Intel · eight years teaching college mathematics.
+MS Mathematics, City College of New York · BS Mechanical Engineering, UC Berkeley · three years of semiconductor physical design at Intel · eight years teaching college mathematics.
 
 ---
 
@@ -16,11 +16,11 @@ An AI agent that picks the wrong action doesn't crash. It does something adjacen
 
 - **Tool selection.** 85 function-calling tools across 12 skill modules. Retrieval narrows them to a mean of 26 per request before the model sees anything — a **46% cut in input tokens**, measured with tiktoken against the provider's own prompt counts, not estimated. KNN selection scored **95.0% recall against a 92.7% embedding-only baseline, on 1,020 synthetic queries**.
 - **Evaluation.** A hand-written suite scoring each answer on the facts it must contain and the facts it must never claim — a case asking for a *draft* forbids "email sent," because an agent that sends it and reports success has done the wrong thing and sounded finished doing it. Run against a baseline every build.
-- **Failure handling.** Backoff honouring `Retry-After`; rate-limit waits bounded twice over, because an earlier version retried forever and left someone waiting hours for a reply; timeout compaction; a repeat guard that blocks a looping call and tells the model to try another approach rather than killing the turn; a hard cap at 35 tool calls.
+- **Failure handling.** Backoff honouring `Retry-After`; rate-limit waits bounded twice over, because an earlier version retried forever and left a reply hanging for hours; timeout compaction; a repeat guard that blocks a looping call and tells the model to try another approach rather than killing the turn; a hard cap at 35 tool calls.
 - **Multi-tenant isolation.** Postgres row-level security with `FORCE` on 27 tables, fail-closed by construction — with no tenant context bound, a forgotten `WHERE` returns zero rows rather than someone else's data. A small, named set of cron and metering paths bypasses it deliberately, as a separate role.
 - **RAG semantic memory**, natural-language automations fired by Graph webhooks, and model routing that escalates only when a turn gets complicated.
 
-`TypeScript` · `Azure OpenAI` · `Microsoft Graph` · `Azure Postgres (RLS)` · `Azure Container Apps` · `Bicep` · `Docker → GHCR via GitHub Actions` · 404 tests
+`TypeScript` · `Azure OpenAI` · `Microsoft Graph` · `Azure Postgres (RLS)` · `Azure Container Apps` · `Bicep` · `Docker → GHCR via GitHub Actions` · `Vitest`
 
 ## [A multi-agent workflow engine](https://mtichikawa.github.io/workflow-engine/)
 
@@ -41,4 +41,4 @@ Plain-English requests become validated control-flow graphs of single-purpose ag
 
 ---
 
-Earlier work — forecasting, anomaly detection, NLP, cloud ETL, a Databricks lakehouse, streaming analytics, a paper-trading arc — sits in the repositories below. It was built in a different era of the job, before agentic coding, while I was learning the ropes.
+Earlier work — forecasting, anomaly detection, NLP, cloud ETL, a Databricks lakehouse, streaming analytics, a paper-trading arc — sits in the repositories below. I built it while I was learning the ropes.
