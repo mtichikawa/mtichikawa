@@ -1,6 +1,6 @@
 # Mike Ichikawa
 
-### I build production AI agents, and the evaluations every build has to pass.
+### I build production AI agents, and the evaluations that show whether they work.
 
 **Founding AI/ML Engineer** · Portland, OR · Remote · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io) · [Résumé](https://mtichikawa.github.io/resume.html)
 
@@ -12,13 +12,13 @@ An AI agent that picks the wrong action doesn't crash. It does something adjacen
 
 ## A production AI agent for Microsoft 365
 
-**[Live on the Microsoft Commercial Marketplace.](https://marketplace.microsoft.com/en-us/product/saas/microclaw.microclaw?tab=Overview)** I built it solo: product, engineering, infrastructure and compliance. It lives in Microsoft Teams: you ask for something in plain language and it works out which actions to take across mail, calendar and files, checks what comes back, and keeps going until the job is done. It passed AppSource certification. It has no paying customers.
+**[Published on the Microsoft Commercial Marketplace](https://marketplace.microsoft.com/en-us/product/saas/microclaw.microclaw?tab=Overview)** and the Teams Store. I built it solo: product, engineering, infrastructure and compliance. It lives in Microsoft Teams: you ask for something in plain language and it works out which actions to take across mail, calendar and files, checks what comes back, and keeps going until the job is done. It passed Microsoft's Marketplace and Teams Store certifications. The hosted service is paused for now, and it has no paying customers.
 
-- **Tool selection.** 85 function-calling tools across 12 skill modules. Retrieval narrows them to a mean of 26 per request before the model sees anything. That cut input tokens by **46%**, measured with tiktoken against the provider's own prompt counts. KNN selection scored **95.0% recall against a 92.7% embedding-only baseline, on 1,020 synthetic queries**.
-- **Evaluation.** A hand-written suite scoring each answer on the facts it must contain and the claims it must never make. A case asking for a *draft* fails if the answer says "email sent", however good the rest reads. Run against a baseline bot every build.
+- **Tool selection.** 85 function-calling tools across 12 skill modules. Sending all of them costs about 46,600 prompt tokens per message, so retrieval narrows the list first. On **362 blind-written test requests** (written by an agent that could see only the tool catalogue, scored once), the redesigned selector offered every tool a request needed **98.3%** of the time (95% CI 96.4–99.2), up from 87.3%. On a 142-case agent eval it did the job as often as sending all 85 tools (136/142) at **62% lower model cost**. An earlier 95% figure is retired: its test split had near-copies of the training examples.
+- **Evaluation.** A hand-written suite scoring each answer on the facts it must contain and the claims it must never make. A case asking for a *draft* fails if the answer says "email sent", however good the rest reads. 142 cases replayed offline with tool-call assertions and a held-out split, priced from measured tokens. Run on demand, not in CI.
 - **Failure handling.** Backoff honouring `Retry-After`; rate-limit waits bounded twice over, because an earlier version retried forever and left a reply hanging for hours; timeout compaction; a repeat guard that blocks a looping call and tells the model to try another approach rather than killing the turn; a hard cap at 35 tool calls.
-- **Multi-tenant isolation.** Postgres row-level security with `FORCE` on 27 tables, fail-closed: with no tenant context bound, a forgotten `WHERE` returns zero rows, not another customer's data. A small, named set of cron and metering paths bypasses it deliberately, as a separate role.
-- **RAG semantic memory**, natural-language automations fired by Graph webhooks, and model routing that escalates only when a turn gets complicated.
+- **Multi-tenant isolation.** Postgres row-level security with `FORCE` on all 27 tenant tables, fail-closed: a tenant-scoped query with no tenant context throws instead of running, and a test fails if any tenant table lacks the policy. About 20 system paths (cron, retention, metering, webhook entry) bypass it deliberately, as a separate role, each listed with its reason.
+- **RAG semantic memory**, natural-language automations fired by Graph change notifications or timers, and model routing: a small model by default, escalating to a large one only when a turn needs it (87% of eval messages never did).
 
 `TypeScript` · `Azure OpenAI` · `Microsoft Graph` · `Azure Postgres (RLS)` · `Azure Container Apps` · `Bicep` · `Docker → GHCR via GitHub Actions` · `Vitest`
 
