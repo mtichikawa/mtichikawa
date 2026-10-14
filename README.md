@@ -26,10 +26,13 @@ An AI agent that picks the wrong action doesn't crash. It does something adjacen
 
 Plain-English requests become validated control-flow graphs of single-purpose agents. **[Interactive walkthrough →](https://mtichikawa.github.io/workflow-engine/)**
 
-- A **static validator** with nine checks rejects unsound graphs before a single model call. Some findings block the run and some only warn. A step whose one exit is conditional still runs, since that can be deliberate, but you're told before the run starts.
-- **Specialists are a shared library**, one instance each, reused across workflows. A test enforces it by object identity.
-- A **learning loop** improved a weak specialist from 4/8 to 8/8 on an independent eval from six curated examples, with no fine-tuning.
-- Speaks **MCP in both directions**: calls external MCP tools, and publishes its own workflows as MCP tools.
+- A **learning loop** works out a team's unwritten rules from their corrections, with no fine-tuning. A clinic's message-routing protocol was never shown to it: on 150 blind-written test messages, accuracy rose from **59% to 97%** (95% CI 93–99%) as it learned from 291 corrections, cutting errors by 93%.
+- **Triage that holds the medical line:** on 320 blind-written synthetic patient messages, it sent **all 160 medical ones to a person with no false alarms**. The same model without the engine's written policy raised false alarms on 17%.
+- A **static validator** checks every workflow before any agent runs, and any step that acts outside the engine must sit behind a human approval gate. On 615 seeded faults from an independently written list it caught 26%; with new data-flow checks it now catches **93%** with no false alarms (the new checks were written after seeing that list).
+- The composer **refuses to fake a capability**: on 120 blind-written requests, it flagged 41 of the 48 it couldn't serve as gaps instead of faking them.
+- **Specialists are a shared library**: every workflow resolves the same registered instance by name.
+- Speaks **MCP in both directions**: calls external MCP tools, and publishes every specialist as an MCP tool, plus one that composes and runs a workflow from a plain-English request.
+- Every test set was written and labelled by Claude models blind to the code, then scored once. The engine is also Claude, so they could share blind spots.
 
 ## [What it takes to stump a coding agent](https://github.com/mtichikawa/klavis-tb3-submission)
 
