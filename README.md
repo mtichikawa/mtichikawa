@@ -10,7 +10,7 @@ MS Mathematics, City College of New York · BS Mechanical Engineering, UC Berkel
 
 ## Now: software and AI for a small manufacturer
 
-I report to the owners, and I design, build, deploy, secure and run all of the company's software. The platform comes first. It runs on Azure, with a delivery pipeline and a self-hosted AI assistant. The first app on it is a quoting app for the sales team, and production scheduling comes next. The client is confidential, so there's no code or name here.
+I report to the owners, and I design, develop, deploy, secure and run all of the company's software. The platform comes first. It runs on Azure, with a delivery pipeline and a self-hosted AI assistant. The first app on it is a quoting app for the sales team, and production scheduling comes next. The client is confidential, so there's no code or name here.
 
 - **The quoting app.** A customer's request for a quote arrives however they send it: emails with attachments, PDFs and drawings, spreadsheets, photos and scans, and notes from a phone call. The app reads all of it and returns product model numbers in seconds, with every value linked to the line it came from. The owners say finding that information can take a salesperson half a day.
 - **Extraction separate from decisions.** The model only extracts and quotes its sources word for word. Every product decision is deterministic rules code built from the company's quoting guide, and where information is missing or conflicting, the app stops for a person.
