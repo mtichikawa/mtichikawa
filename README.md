@@ -1,21 +1,21 @@
 # Mike Ichikawa
 
-### I build AI systems, and the tests that show they work.
+### I'm the engineer for a small manufacturer, building whatever software and AI the business needs.
 
-**AI Integration Lead (Fractional)** · Portland, OR · Remote · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io) · [Résumé](https://mtichikawa.github.io/resume.html)
+**Lead AI Engineer (Fractional)** · Portland, OR · Remote · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io) · [Résumé](https://mtichikawa.github.io/resume.html)
 
 MS Mathematics, City College of New York · BS Mechanical Engineering, UC Berkeley · three years of semiconductor physical design at Intel · eight years teaching college mathematics.
 
 ---
 
-## Now: AI integration for a small manufacturer
+## Now: software and AI for a small manufacturer
 
-I lead AI integration for a small manufacturer, working directly with the owners. I'm building a quoting app for their sales team and deploying the company's Azure platform and delivery pipeline, with a self-hosted AI assistant as the next app on it. The client is confidential, so there's no code or name here.
+I report to the owners, and I design, build, deploy, secure and run all of the company's software. The platform comes first. It runs on Azure, with a delivery pipeline and a self-hosted AI assistant. The first app on it is a quoting app for the sales team, and production scheduling comes next. The client is confidential, so there's no code or name here.
 
 - **The quoting app.** A customer's request for a quote arrives however they send it: emails with attachments, PDFs and drawings, spreadsheets, photos and scans, and notes from a phone call. The app reads all of it and returns product model numbers in seconds, with every value linked to the line it came from. The owners say finding that information can take a salesperson half a day.
-- **The AI reads, code decides.** The model only extracts and quotes its sources word for word. Every product decision is deterministic rules code built from the company's quoting guide, and where information is missing or conflicting, the app stops for a person.
+- **Extraction separate from decisions.** The model only extracts and quotes its sources word for word. Every product decision is deterministic rules code built from the company's quoting guide, and where information is missing or conflicting, the app stops for a person.
 - **Changing a rule.** An owner changes a quoting rule in one plain-English sentence. Before it takes effect, the app reruns every open and approved quote and 50,000 generated requests under the old and new rules, shows what would change, and a second person approves it.
-- **The platform.** Staging and live environments for each app, rollback, a managed identity with no stored secrets, private networking, and 112 automated tests on every pull request.
+- **The platform.** Staging and live environments for each app, rollback, a managed identity with no stored secrets, and private networking. No change merges or deploys until its tests pass.
 
 `Python` · `Azure` · `GitHub Actions`
 
@@ -34,7 +34,7 @@ I lead AI integration for a small manufacturer, working directly with the owners
 ## Side projects
 
 - **[A multi-agent workflow engine](https://mtichikawa.github.io/workflow-engine/).** A Python engine, built from scratch, that turns a plain-English request into a graph of small single-purpose agents. Every workflow is checked before it runs, and any step that acts outside the engine has to sit behind a person's approval. It learns a team's unwritten rules from their corrections, with no fine-tuning: on a clinic's routing rules it was never shown, accuracy on 150 synthetic test messages rose from 59% to 97%.
-- **[What it takes to stump a coding agent](https://github.com/mtichikawa/klavis-tb3-submission).** I built 138 probe environments looking for one task a frontier coding agent couldn't solve. Complexity didn't stop it: it solved 31 of 33 probes. Misleading evidence did, so I built the final task around it. On the benchmark's own harness, Claude Code on Claude Opus 5 and Codex on GPT-5.6 failed all six trials.
+- **[What it takes to stump a coding agent](https://github.com/mtichikawa/klavis-tb3-submission).** I built 138 probe environments looking for one task a frontier coding agent couldn't solve. It solved 31 of 33. The two it couldn't solve both had misleading evidence, so I built the final task around that. On the benchmark's own harness, Claude Code on Claude Opus 5 and Codex on GPT-5.6 failed all six trials.
 
 ---
 
