@@ -15,7 +15,7 @@ I report to the owners, and I design, build, deploy, secure and run all of the c
 - **The quoting app.** A customer's request for a quote arrives however they send it: emails with attachments, PDFs and drawings, spreadsheets, photos and scans, and notes from a phone call. The app reads all of it and returns product model numbers in seconds, with every value linked to the line it came from. The owners say finding that information can take a salesperson half a day.
 - **Extraction separate from decisions.** The model only extracts and quotes its sources word for word. Every product decision is deterministic rules code built from the company's quoting guide, and where information is missing or conflicting, the app stops for a person.
 - **Changing a rule.** An owner changes a quoting rule in one plain-English sentence. Before it takes effect, the app reruns every open and approved quote and 50,000 generated requests under the old and new rules, shows what would change, and a second person approves it.
-- **The platform.** Staging and live environments for each app, rollback, a managed identity with no stored secrets, and private networking. No change merges or deploys until its tests pass.
+- **The platform.** Each app gets staging and live environments, rollback, a managed identity with no stored secrets, and private networking, and no change merges or deploys until its tests pass.
 
 `Python` · `Azure` · `GitHub Actions`
 
