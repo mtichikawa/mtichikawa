@@ -1,6 +1,6 @@
 # Mike Ichikawa
 
-### I'm the engineer for a small manufacturer, building whatever software and AI the business needs.
+### I'm the engineer for a small manufacturer, developing whatever software and AI the business needs.
 
 **Lead AI Engineer** · Portland, OR · Remote · [projects.ichikawa@gmail.com](mailto:projects.ichikawa@gmail.com) · [mtichikawa.github.io](https://mtichikawa.github.io) · [Résumé](https://mtichikawa.github.io/resume.html)
 
