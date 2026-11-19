@@ -33,7 +33,7 @@ It was published on the Microsoft Commercial Marketplace and the Teams Store. I 
 
 ## Side projects
 
-- **[A multi-agent workflow engine](https://mtichikawa.github.io/workflow-engine/).** A Python engine, built from scratch, that turns a plain-English request into a graph of small single-purpose agents. Every workflow is checked before it runs, and any step that acts outside the engine has to sit behind a person's approval. It learns a team's unwritten rules from their corrections, with no fine-tuning: on a clinic's routing rules it was never shown, accuracy on 150 synthetic test messages rose from 59% to 97%.
+- **A multi-agent workflow engine.** A Python engine, built from scratch, that turns a plain-English request into a graph of small single-purpose agents. Every workflow is checked before it runs, and any step that acts outside the engine has to sit behind a person's approval. It learns a team's unwritten rules from their corrections, with no fine-tuning: on a clinic's routing rules it was never shown, accuracy on 150 synthetic test messages rose from 59% to 97%.
 - **[What it takes to stump a coding agent](https://github.com/mtichikawa/klavis-tb3-submission).** I built 138 probe environments looking for one task a frontier coding agent couldn't solve. It solved 31 of 33. The two it couldn't solve both had misleading evidence, so I built the final task around that. On the benchmark's own harness, Claude Code on Claude Opus 5 and Codex on GPT-5.6 failed all six trials.
 
 ---
